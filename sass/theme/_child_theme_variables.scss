@@ -6,14 +6,21 @@
 // Just add your color code here, compile the theme.scss file to change this color everywhere
 
 
+// Responsive breakpoints
+$screen-xxl: 1600px;
+
+
 //
 // Color system
 //
 
 $primary: #489dc1;
 $yellow: #f4d473;
+$black: #3f4347;
 
 // Font Sizes
 $body_font_size: 1.25rem;
 $body_line_height: 1.625rem;
+
+$text_sm: .625rem; // 10px
 

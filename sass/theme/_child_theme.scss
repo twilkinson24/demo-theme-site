@@ -13,6 +13,7 @@
 }
 
 body {
+    color: $black;
     font-family: 'Calibre', cursive;
     font-size: $body_font_size; // 1.25rem
     line-height: $body_line_height; // 1.625rem
@@ -34,10 +35,59 @@ h3 {
     border: 1px solid red;
 }
 
+/* Globals */
+body { // for specificity
+    .text-base {
+        font-size: 1rem;
+    }
+
+}
 
 
 
-/* Homepage */
-#wrapper-hero {
-    background: $yellow;
+
+/* Homepage hero */
+.home #wrapper-hero {
+    height: 100vh;
+    padding: 50px 50px 100px 50px !important; // bootstrap override
+    
+    @media screen and (max-width: $screen-xxl) {
+        padding-bottom: 70px !important;
+    }
+    
+    .inner-hero {
+        background: $yellow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    // Nav menu widget in hero
+    ul#menu-hero-nav-menu {
+        list-style-type: none;
+        display: flex;
+        padding-left: 0;
+
+        .menu-item {
+            font-family: 'Founders', sans-serif;
+            font-size: $text_sm;
+            letter-spacing: 2px;
+            margin-right: 30px;
+            text-transform: uppercase;
+
+            a {
+                color: $black;
+                font-weight: 600;
+            }
+        }
+    }
+
+    // textwidget
+    .textwidget {
+        margin-bottom: 80px;
+
+        h1 {
+            margin-bottom: 40px;
+        }
+    }
 }
