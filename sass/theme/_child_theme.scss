@@ -1,0 +1,31 @@
+/* Custom Stylesheet */
+
+/* Fonts */
+@font-face { 
+    font-family: 'Calibre'; 
+    font-weight: 700;
+    src: url('../fonts/Calibre Test/calibre-test-bold.woff'); 
+}
+@font-face {
+    font-family: 'Calibre'; 
+    font-weight: 400;
+    src: url('../fonts/Calibre Test/calibre-test-light.woff'); 
+}
+
+body {
+    font-family: 'Calibre', cursive;
+    font-size: $body_font_size; // 1.25rem
+    line-height: $body_line_height; // 1.625rem
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Calibre', cursive;
+    font-weight: 700;
+}
+h1 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
