@@ -9,7 +9,8 @@
         aboutSlider.on('init', function(event, slick, direction){
             console.log('init');
             // left
-          });
+        });
+
 
         aboutSlider.slick({
             slidesToShow: 1,
@@ -25,7 +26,7 @@
             customPaging : function(slider, i) {
                 var slideNo = i + 1
                 var thumb = $(slider.$slides[i]).data();
-                return '<a class="dot">'+slideNo+'</a>';
+                return '<span class="dot">'+slideNo+ ' / ' + $('.about-slider__slide').length + '</span>';
             },
         })
 
