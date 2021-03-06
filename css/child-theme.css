@@ -9267,16 +9267,6 @@ a.skip-link {
 .navbar h1 {
   font-weight: 400; }
 
-.woocommerce-input-wrapper {
-  width: 100%; }
-
-figure.woocommerce-product-gallery__wrapper {
-  max-width: inherit !important; }
-
-@media (min-width: 768px) {
-  #coupon_code.input-text {
-    width: 110px !important; } }
-
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -11612,6 +11602,78 @@ figure.woocommerce-product-gallery__wrapper {
 .gallery-caption {
   display: block; }
 
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent; }
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0; }
+  .slick-list:focus {
+    outline: none; }
+  .slick-list.dragging {
+    cursor: pointer;
+    cursor: hand; }
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+  .slick-track:before, .slick-track:after {
+    content: "";
+    display: table; }
+  .slick-track:after {
+    clear: both; }
+  .slick-loading .slick-track {
+    visibility: hidden; }
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none; }
+  [dir="rtl"] .slick-slide {
+    float: right; }
+  .slick-slide img {
+    display: block; }
+  .slick-slide.slick-loading img {
+    display: none; }
+  .slick-slide.dragging img {
+    pointer-events: none; }
+  .slick-initialized .slick-slide {
+    display: block; }
+  .slick-loading .slick-slide {
+    visibility: hidden; }
+  .slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent; }
+
+.slick-arrow.slick-hidden {
+  display: none; }
+
 /* Custom Stylesheet */
 /* Fonts */
 @font-face {
@@ -11624,21 +11686,33 @@ figure.woocommerce-product-gallery__wrapper {
   font-weight: 400;
   src: url("../fonts/Calibre Test/calibre-test-light.woff"); }
 
+@font-face {
+  font-family: 'Calibre';
+  font-weight: 500;
+  src: url("../fonts/Calibre Test/calibre-test-regular.woff"); }
+
 body {
   color: #3f4347;
-  font-family: 'Calibre', cursive;
+  font-family: 'Calibre', sans-serif;
   font-size: 1.25rem;
   line-height: 1.625rem; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Calibre', cursive;
+  font-family: 'Calibre', sans-serif;
   font-weight: 700; }
 
 h1 {
   font-size: 50px; }
 
+h2 {
+  font-size: 72px;
+  line-height: 1; }
+
 h3 {
   font-size: 2.5rem; }
+
+h4 {
+  font-size: 1.475rem; }
 
 .hero {
   border: 1px solid red; }
@@ -11646,6 +11720,21 @@ h3 {
 /* Globals */
 body .text-base {
   font-size: 1rem; }
+
+body .text-sm {
+  font-size: 0.75rem; }
+
+body .text-xs {
+  font-size: 0.625rem; }
+
+body .text-lg {
+  font-size: 1.875rem; }
+
+body .fw-500 {
+  font-weight: 500; }
+
+body .text-yellow {
+  color: #f4d473; }
 
 /* Homepage hero */
 .home #wrapper-hero {
@@ -11665,6 +11754,8 @@ body .text-base {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    .home #wrapper-hero .inner-hero h2 {
+      font-size: 1rem; }
   .home #wrapper-hero ul#menu-hero-nav-menu {
     list-style-type: none;
     display: -webkit-box;
@@ -11673,7 +11764,7 @@ body .text-base {
     padding-left: 0; }
     .home #wrapper-hero ul#menu-hero-nav-menu .menu-item {
       font-family: 'Founders', sans-serif;
-      font-size: 0.625rem;
+      font-size: 0.75rem;
       letter-spacing: 2px;
       margin-right: 30px;
       text-transform: uppercase; }
@@ -11684,6 +11775,110 @@ body .text-base {
     margin-bottom: 80px; }
     .home #wrapper-hero .textwidget h1 {
       margin-bottom: 40px; }
+
+/* Homepage About Section */
+section.about {
+  overflow: hidden;
+  padding: 50px 0 120px 0; }
+
+.about-section__text {
+  margin-left: 50px;
+  max-width: 700px; }
+
+/* Homepage Sliders */
+.about-slider-wrap {
+  position: relative; }
+  .about-slider-wrap::before {
+    content: '';
+    display: block;
+    width: 500px;
+    height: 600px;
+    position: absolute;
+    top: 26%;
+    left: 60%;
+    background-image: url(./../images/oval.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0; }
+
+.about-slider {
+  padding: 0;
+  z-index: 1; }
+  .about-slider .slick-list {
+    padding: 45px 0 30px 0; }
+  .about-slider .slick-track {
+    border: 1px solid #f4d473; }
+  .about-slider button.slick-prev,
+  .about-slider button.slick-next {
+    background: transparent;
+    position: absolute;
+    top: -35px;
+    left: 0;
+    border: 1px solid #f4d473;
+    border-bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 80px;
+    width: 80px;
+    z-index: 99; }
+    .about-slider button.slick-prev:active, .about-slider button.slick-prev:focus,
+    .about-slider button.slick-next:active,
+    .about-slider button.slick-next:focus {
+      outline: none; }
+    .about-slider button.slick-prev i,
+    .about-slider button.slick-next i {
+      font-size: 2rem; }
+  .about-slider button.slick-next {
+    left: 80px;
+    border-left: 0; }
+  .about-slider ul.slick-dots {
+    color: #9199a4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 80px;
+    list-style-type: none;
+    font-family: Founders,sans-serif;
+    font-size: 0.75rem;
+    padding: 0;
+    position: absolute;
+    left: 189px;
+    top: -35px; }
+    .about-slider ul.slick-dots li {
+      display: none; }
+      .about-slider ul.slick-dots li.slick-active {
+        display: block; }
+  .about-slider .about-slider__slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 505px;
+    padding: 73px 60px; }
+  .about-slider .about-slider__slide-image {
+    position: absolute;
+    top: -45px;
+    right: -100px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    height: 560px;
+    width: 700px;
+    z-index: 9; }
+  .about-slider .about-slider__slide-text {
+    max-width: 300px; }
 
 /*
 * Use existing Bootstrap 4 classes and
