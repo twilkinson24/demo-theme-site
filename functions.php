@@ -31,3 +31,23 @@ function add_child_theme_textdomain() {
     load_child_theme_textdomain( 'understrap-child', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
+
+
+
+
+
+/* 
+*Custom Theme Functions below 
+*/
+add_action( 'admin_init', 'perch_hide_editor' );
+ 
+function perch_hide_editor() {
+    $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+    if( !isset( $post_id ) ) return;
+ 
+    $template_file = get_post_meta($post_id, '_wp_page_template', true);
+     
+    if($template_file == 'page-templates/homepage.php') { // edit the template name
+        remove_post_type_support('page', 'editor');
+    }
+}
