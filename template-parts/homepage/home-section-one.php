@@ -8,8 +8,6 @@ defined( 'ABSPATH' ) || exit;
 
 
 // ACF variables
-
-/* About Section */
 $perch_home_about_section_content = get_field('perch_home_about_section_content');
 // slider text content
 $perch_home_about_show_slider = get_field('perch_home_about_show_slider');

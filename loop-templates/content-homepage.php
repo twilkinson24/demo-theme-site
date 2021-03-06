@@ -23,6 +23,7 @@ defined( 'ABSPATH' ) || exit;
             * Homepage sections
             */
            echo get_template_part('template-parts/homepage/home-section-one'); 
+           echo get_template_part('template-parts/homepage/home-section-two'); 
         }
     ?>
 
