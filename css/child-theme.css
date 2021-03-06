@@ -9267,16 +9267,6 @@ a.skip-link {
 .navbar h1 {
   font-weight: 400; }
 
-.woocommerce-input-wrapper {
-  width: 100%; }
-
-figure.woocommerce-product-gallery__wrapper {
-  max-width: inherit !important; }
-
-@media (min-width: 768px) {
-  #coupon_code.input-text {
-    width: 110px !important; } }
-
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -11612,6 +11602,78 @@ figure.woocommerce-product-gallery__wrapper {
 .gallery-caption {
   display: block; }
 
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent; }
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0; }
+  .slick-list:focus {
+    outline: none; }
+  .slick-list.dragging {
+    cursor: pointer;
+    cursor: hand; }
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+  .slick-track:before, .slick-track:after {
+    content: "";
+    display: table; }
+  .slick-track:after {
+    clear: both; }
+  .slick-loading .slick-track {
+    visibility: hidden; }
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none; }
+  [dir="rtl"] .slick-slide {
+    float: right; }
+  .slick-slide img {
+    display: block; }
+  .slick-slide.slick-loading img {
+    display: none; }
+  .slick-slide.dragging img {
+    pointer-events: none; }
+  .slick-initialized .slick-slide {
+    display: block; }
+  .slick-loading .slick-slide {
+    visibility: hidden; }
+  .slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent; }
+
+.slick-arrow.slick-hidden {
+  display: none; }
+
 /* Custom Stylesheet */
 /* Fonts */
 @font-face {
@@ -11646,6 +11708,12 @@ h3 {
 /* Globals */
 body .text-base {
   font-size: 1rem; }
+
+body .text-small {
+  font-size: 0.625rem; }
+
+body .text-yellow {
+  color: #f4d473; }
 
 /* Homepage hero */
 .home #wrapper-hero {
@@ -11684,6 +11752,55 @@ body .text-base {
     margin-bottom: 80px; }
     .home #wrapper-hero .textwidget h1 {
       margin-bottom: 40px; }
+
+/* Homepage Sliders */
+.about-slider {
+  border: 1px solid #f4d473;
+  margin-top: 80px; }
+  .about-slider button.slick-prev,
+  .about-slider button.slick-next {
+    background: transparent;
+    position: absolute;
+    top: -80px;
+    left: 0;
+    border: 1px solid #f4d473;
+    border-bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 80px;
+    width: 80px; }
+    .about-slider button.slick-prev i,
+    .about-slider button.slick-next i {
+      font-size: 2rem; }
+  .about-slider button.slick-next {
+    left: 80px;
+    border-left: 0; }
+  .about-slider ul.slick-dots {
+    color: #9199a4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 80px;
+    list-style-type: none;
+    font-size: 0.625rem;
+    padding: 0;
+    position: absolute;
+    left: 189px;
+    top: -80px; }
+    .about-slider ul.slick-dots li {
+      display: none; }
+      .about-slider ul.slick-dots li.slick-active {
+        display: block; }
 
 /*
 * Use existing Bootstrap 4 classes and

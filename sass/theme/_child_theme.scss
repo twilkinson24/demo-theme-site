@@ -40,6 +40,13 @@ body { // for specificity
     .text-base {
         font-size: 1rem;
     }
+    .text-small {
+        font-size: $text_sm;
+    }
+    // colors
+    .text-yellow {
+        color: $yellow;
+    }
 
 }
 
@@ -90,4 +97,56 @@ body { // for specificity
             margin-bottom: 40px;
         }
     }
+}
+
+/* Homepage Sliders */
+.about-slider {
+    border: 1px solid $yellow;
+    margin-top: 80px;
+
+    button.slick-prev,
+    button.slick-next {
+        background: transparent;
+        position: absolute;
+        top: -80px;
+        left: 0;
+        border: 1px solid $yellow;
+        border-bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        width: 80px;
+
+        i {
+            font-size: 2rem;
+        }
+    }
+    button.slick-next {
+        left: 80px;
+        border-left: 0;
+    }
+
+    ul.slick-dots  {
+        color: $gray;
+        display: flex;
+        align-items: center;
+        height: 80px;
+        list-style-type: none;
+        font-size: $text_sm;
+        padding: 0;
+        position: absolute; 
+        left: 189px;
+        top: -80px;
+
+        li {
+            display: none;
+
+            &.slick-active {
+                display: block;
+            }
+        }
+    }
+   
+   
 }

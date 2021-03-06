@@ -25,6 +25,16 @@ function theme_enqueue_styles() {
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
     }
+
+    // Custom JS for theme homepage template
+    if(is_page_template( 'page-templates/homepage.php' )) {
+        // slick JS and front-page JS
+        wp_enqueue_script('slick-slider-script', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js',null,array('jquery'),true);
+        // homepage template JS
+        wp_enqueue_script('perch-homepage-js', get_stylesheet_directory_uri() . '/js/perch-homepage.js',null,array('jquery', 'slick-slider-script'), true);   
+        
+    }
+
 }
 
 function add_child_theme_textdomain() {
