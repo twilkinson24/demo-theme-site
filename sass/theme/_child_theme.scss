@@ -101,14 +101,19 @@ body { // for specificity
 
 /* Homepage Sliders */
 .about-slider {
-    border: 1px solid $yellow;
-    margin-top: 80px;
+    padding: 0;
 
+    .slick-list {
+        padding: 45px 0 30px 0;
+    }
+    .slick-track {
+        border: 1px solid $yellow;
+    }
     button.slick-prev,
     button.slick-next {
         background: transparent;
         position: absolute;
-        top: -80px;
+        top: -35px;
         left: 0;
         border: 1px solid $yellow;
         border-bottom: 0;
@@ -117,6 +122,11 @@ body { // for specificity
         align-items: center;
         height: 80px;
         width: 80px;
+
+        &:active,
+        &:focus {
+            outline: none;
+        }
 
         i {
             font-size: 2rem;
@@ -137,7 +147,7 @@ body { // for specificity
         padding: 0;
         position: absolute; 
         left: 189px;
-        top: -80px;
+        top: -35px;
 
         li {
             display: none;
@@ -147,6 +157,26 @@ body { // for specificity
             }
         }
     }
-   
+
+    .about-slider__slide {
+        display: flex;
+        align-items: center;
+        min-height: 505px;
+        padding: 73px 60px;
+    }
+
+    .about-slider__slide-image {
+        position: absolute;
+        top: -45px;
+        right: 0;
+        object-fit: contain;
+        height: 560px;
+        width: 700px;
+        z-index: 9;
+    }
+
+    .about-slider__slide-text {
+        max-width: 300px;
+    }
    
 }

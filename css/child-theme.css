@@ -11755,13 +11755,16 @@ body .text-yellow {
 
 /* Homepage Sliders */
 .about-slider {
-  border: 1px solid #f4d473;
-  margin-top: 80px; }
+  padding: 0; }
+  .about-slider .slick-list {
+    padding: 45px 0 30px 0; }
+  .about-slider .slick-track {
+    border: 1px solid #f4d473; }
   .about-slider button.slick-prev,
   .about-slider button.slick-next {
     background: transparent;
     position: absolute;
-    top: -80px;
+    top: -35px;
     left: 0;
     border: 1px solid #f4d473;
     border-bottom: 0;
@@ -11776,6 +11779,10 @@ body .text-yellow {
             align-items: center;
     height: 80px;
     width: 80px; }
+    .about-slider button.slick-prev:active, .about-slider button.slick-prev:focus,
+    .about-slider button.slick-next:active,
+    .about-slider button.slick-next:focus {
+      outline: none; }
     .about-slider button.slick-prev i,
     .about-slider button.slick-next i {
       font-size: 2rem; }
@@ -11796,11 +11803,31 @@ body .text-yellow {
     padding: 0;
     position: absolute;
     left: 189px;
-    top: -80px; }
+    top: -35px; }
     .about-slider ul.slick-dots li {
       display: none; }
       .about-slider ul.slick-dots li.slick-active {
         display: block; }
+  .about-slider .about-slider__slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 505px;
+    padding: 73px 60px; }
+  .about-slider .about-slider__slide-image {
+    position: absolute;
+    top: -45px;
+    right: 0;
+    -o-object-fit: contain;
+       object-fit: contain;
+    height: 560px;
+    width: 700px;
+    z-index: 9; }
+  .about-slider .about-slider__slide-text {
+    max-width: 300px; }
 
 /*
 * Use existing Bootstrap 4 classes and

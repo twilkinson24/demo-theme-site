@@ -16,11 +16,16 @@
             slidesToScroll: 1,
             arrows: true,
             dots: true,
+            infinite: true, 
+            fade: true,
+            speed: 400,
+            cssEase: 'linear',
             prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left text-yellow' aria-hidden='true'></i></button>",
             nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right text-yellow' aria-hidden='true'></i></button>",
             customPaging : function(slider, i) {
+                var slideNo = i + 1
                 var thumb = $(slider.$slides[i]).data();
-                return '<a class="dot">'+i+'</a>';
+                return '<a class="dot">'+slideNo+'</a>';
             },
         })
 

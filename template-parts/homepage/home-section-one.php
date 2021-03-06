@@ -49,20 +49,39 @@ $perch_home_about_show_slider = get_field('perch_home_about_show_slider');
 						<ul class="about-slider">
 
 							<?php if($perch_home_about_slide_content_1) : ?>
-								<li class="about-slider__slide">
-									<?php echo $perch_home_about_slide_content_1; ?>
+								<li class="about-slider__slide position-relative">
+									<div class="about-slider__slide-text">
+										<?php echo $perch_home_about_slide_content_1; ?>
+									</div>
+
+									<?php if($perch_home_about_slide_img_1) {
+										echo wp_get_attachment_image( $perch_home_about_slide_img_1, 'large', "", ["class" => "about-slider__slide-image"] ); 
+									} ?>
+
 								</li>
 							<?php endif; ?><!-- Slide -->
 
 							<?php if($perch_home_about_slide_content_2) : ?>
 								<li class="about-slider__slide">
-									<?php echo $perch_home_about_slide_content_2; ?>
+									<div class="about-slider__slide-text">
+										<?php echo $perch_home_about_slide_content_2; ?>
+									</div>
+
+									<?php if($perch_home_about_slide_img_2) {
+										echo wp_get_attachment_image( $perch_home_about_slide_img_2, 'large', "", ["class" => "about-slider__slide-image"] ); 
+									} ?>
 								</li>
 							<?php endif; ?><!-- Slide -->
 
 							<?php if($perch_home_about_slide_content_3) : ?>
 								<li class="about-slider__slide">
-									<?php echo $perch_home_about_slide_content_3; ?>
+									<div class="about-slider__slide-text">
+										<?php echo $perch_home_about_slide_content_3; ?>
+									</div>
+
+									<?php if($perch_home_about_slide_img_3) {
+										echo wp_get_attachment_image( $perch_home_about_slide_img_3, 'large', "", ["class" => "about-slider__slide-image"] ); 
+									} ?>
 								</li>
 							<?php endif; ?><!-- Slide -->
 
