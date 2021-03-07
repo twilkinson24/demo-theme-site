@@ -11719,14 +11719,21 @@ h4 {
   border: 1px solid red; }
 
 /* Globals */
-body .text-base {
-  font-size: 1rem; }
+body .row {
+  margin-left: 0 !important;
+  margin-right: 0 !important; }
+
+body .text-xs {
+  font-size: 0.625rem; }
 
 body .text-sm {
   font-size: 0.75rem; }
 
-body .text-xs {
-  font-size: 0.625rem; }
+body .text-base {
+  font-size: 1rem; }
+
+body .text-md {
+  font-size: 1.375rem; }
 
 body .text-lg {
   font-size: 1.875rem; }
@@ -11734,8 +11741,31 @@ body .text-lg {
 body .fw-500 {
   font-weight: 500; }
 
+body .text-black {
+  color: #3f4347; }
+
 body .text-yellow {
   color: #f4d473; }
+
+body .cta-btn {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  position: relative;
+  background: transparent;
+  border: 0;
+  outline: 0; }
+  body .cta-btn:after {
+    content: '\f054';
+    font-family: FontAwesome;
+    font-weight: light;
+    font-size: 8px;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
 
 /* Homepage hero */
 .tooltip-inner {
@@ -11787,18 +11817,20 @@ body .text-yellow {
             align-items: center; }
     .home #wrapper-hero .inner-hero h1 {
       font-size: 90px; }
-      .home #wrapper-hero .inner-hero h1 span.text-primary {
-        cursor: pointer;
-        display: inline-block;
-        font-size: 2rem;
-        padding-left: 10px;
-        -webkit-transform: translateY(-35px);
-                transform: translateY(-35px); }
-    .home #wrapper-hero .inner-hero h2 {
+    .home #wrapper-hero .inner-hero h1 span.text-primary,
+    .home #wrapper-hero .inner-hero h2 span.text-primary {
       cursor: pointer;
+      display: inline-block;
+      font-size: 2rem;
+      padding-left: 10px;
+      -webkit-transform: translateY(-35px);
+              transform: translateY(-35px); }
+    .home #wrapper-hero .inner-hero h2 {
       font-size: 1rem; }
       .home #wrapper-hero .inner-hero h2 span.text-primary {
-        font-size: 1.5rem; }
+        display: inline;
+        font-size: 1.5rem;
+        padding-left: 0; }
   .home #wrapper-hero ul#menu-hero-nav-menu {
     list-style-type: none;
     display: -webkit-box;
@@ -11814,6 +11846,9 @@ body .text-yellow {
       .home #wrapper-hero ul#menu-hero-nav-menu .menu-item a {
         color: #3f4347;
         font-weight: 600; }
+        .home #wrapper-hero ul#menu-hero-nav-menu .menu-item a:hover {
+          opacity: .8;
+          text-decoration: none; }
   .home #wrapper-hero .textwidget {
     margin-bottom: 80px; }
     .home #wrapper-hero .textwidget h1 {
@@ -11928,8 +11963,46 @@ section.about {
 .page-template-homepage .case-study {
   color: #fff;
   height: 700px; }
+  .page-template-homepage .case-study .case-study-wrap {
+    max-width: 1156px;
+    margin: 0 auto; }
+  .page-template-homepage .case-study .case-study__text-content {
+    max-width: 453px; }
+    .page-template-homepage .case-study .case-study__text-content h3 {
+      font-size: 74px;
+      line-height: 1; }
+    .page-template-homepage .case-study .case-study__text-content .tag {
+      display: block;
+      letter-spacing: 2px;
+      font-weight: 600;
+      margin-right: 20px; }
+  .page-template-homepage .case-study .row.odd {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse; }
 
 /* END Homepage Case Studies Section */
+/* Homepage Clients Section */
+section.our-clients {
+  padding: 150px 50px; }
+  section.our-clients > div {
+    max-width: 1500px; }
+    @media screen and (max-width: 1600px) {
+      section.our-clients > div {
+        max-width: 1200px; } }
+  section.our-clients .clients-section-text {
+    max-width: 400px; }
+  section.our-clients img {
+    margin-left: 50px; }
+
+/* END Homepage Clients Section */
+/* Our Team Section */
+section.our-team {
+  background-color: #FBFBF5;
+  padding: 150px 50px 200px; }
+
+/* END Our Team Section */
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style

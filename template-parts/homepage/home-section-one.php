@@ -22,7 +22,7 @@ $perch_home_about_show_slider = get_field('perch_home_about_show_slider');
 		<div class="row">
 
 				<?php if($perch_home_about_show_slider) {
-					echo '<div class="col-lg-6 d-flex justify-content-center">';
+					echo '<div class="col-lg-6 d-flex justify-content-center p-0">';
 				} ?>
 
 					<div class="about-section__text">
@@ -44,7 +44,7 @@ $perch_home_about_show_slider = get_field('perch_home_about_show_slider');
 					$perch_home_about_slide_img_3 = get_field('perch_home_about_slide_img_3');
 					$perch_home_about_slide_img_4 = get_field('perch_home_about_slide_img_4');
 				?>
-					<div class="col-lg-6">
+					<div class="col-lg-6 p-0">
 						<div class="about-slider-wrap">
 							<ul class="about-slider">
 

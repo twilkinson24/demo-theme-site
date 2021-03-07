@@ -30,7 +30,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<div class="row">
 
-			<div class="col-md-12 content-area" id="primary">
+			<div class="col-md-12 content-area p-0" id="primary">
 
 				<main class="site-main" id="main" role="main">
 
