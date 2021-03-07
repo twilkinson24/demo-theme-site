@@ -61,3 +61,6 @@ function perch_hide_editor() {
         remove_post_type_support('page', 'editor');
     }
 }
+
+
+remove_filter('get_the_excerpt', 'wp_trim_excerpt');

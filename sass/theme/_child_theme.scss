@@ -78,7 +78,7 @@ body { // for specificity
 
 // tooltips
 .tooltip-inner {
-    background-color: rgba(255,255,255,0.999) !important;
+    background-color: rgba(255,255,255,.96) !important;
     /*!important is not necessary if you place custom.css at the end of your css calls. For the purpose of this demo, it seems to be required in SO snippet*/
     color: $black;
     box-shadow: 0 2px 15px rgba(0,0,0,.2);
@@ -88,24 +88,25 @@ body { // for specificity
     max-width: 350px;
    font-size: 1rem;
    line-height: 1.5;
+   text-align: left;
+   opacity: 1 !important;
+}  
+.tooltip.show{opacity:1!important;}
+.tooltip.top .tooltip-arrow {
+border-top-color: rgba(255,255,255,0.9999);
 }
-  
-  
-  .tooltip.top .tooltip-arrow {
-    border-top-color: rgba(255,255,255,0.7);
-  }
-  
-  .tooltip.right .tooltip-arrow {
-    border-right-color: rgba(255,255,255,0.7);
-  }
-  
-  .tooltip.bottom .tooltip-arrow {
-    border-bottom-color: rgba(255,255,255,0.7);
-  }
-  
-  .tooltip.left .tooltip-arrow {
-    border-left-color: rgba(255,255,255,0.7);
-  }
+
+.tooltip.right .tooltip-arrow {
+border-right-color: rgba(255,255,255,0.9999);
+}
+
+.tooltip.bottom .tooltip-arrow {
+border-bottom-color: rgba(255,255,255,0.9999);
+}
+
+.tooltip.left .tooltip-arrow {
+border-left-color: rgba(255,255,255,0.9999);
+}
 
 .home #wrapper-hero {
     height: 100vh;
@@ -287,7 +288,7 @@ section.about {
 }
 /* END Homepage About Section */
 
-/* Homepage Case Studies Section */
+/* Homepage Case Study */
 .page-template-homepage .case-study {
     color: #fff;
     height: 700px;
