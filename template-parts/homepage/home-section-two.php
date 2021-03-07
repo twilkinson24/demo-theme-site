@@ -8,7 +8,9 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-
+/* 
+* Homepage template Case Studies Section
+*/
 
 $perch_cs_args = array(  
     'post_type' => 'case-studies',

@@ -11699,7 +11699,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Calibre', sans-serif;
-  font-weight: 700; }
+  font-weight: 700;
+  line-height: 1; }
 
 h1 {
   font-size: 50px; }
@@ -11737,6 +11738,31 @@ body .text-yellow {
   color: #f4d473; }
 
 /* Homepage hero */
+.tooltip-inner {
+  background-color: rgba(255, 255, 255, 0.999) !important;
+  /*!important is not necessary if you place custom.css at the end of your css calls. For the purpose of this demo, it seems to be required in SO snippet*/
+  color: #3f4347;
+  -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  width: 300px;
+  display: block;
+  max-width: 350px;
+  font-size: 1rem;
+  line-height: 1.5; }
+
+.tooltip.top .tooltip-arrow {
+  border-top-color: rgba(255, 255, 255, 0.7); }
+
+.tooltip.right .tooltip-arrow {
+  border-right-color: rgba(255, 255, 255, 0.7); }
+
+.tooltip.bottom .tooltip-arrow {
+  border-bottom-color: rgba(255, 255, 255, 0.7); }
+
+.tooltip.left .tooltip-arrow {
+  border-left-color: rgba(255, 255, 255, 0.7); }
+
 .home #wrapper-hero {
   height: 100vh;
   padding: 50px 50px 100px 50px !important; }
@@ -11754,8 +11780,20 @@ body .text-yellow {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    .home #wrapper-hero .inner-hero h1 {
+      font-size: 90px; }
+      .home #wrapper-hero .inner-hero h1 span.text-primary {
+        cursor: pointer;
+        display: inline-block;
+        font-size: 2rem;
+        padding-left: 10px;
+        -webkit-transform: translateY(-35px);
+                transform: translateY(-35px); }
     .home #wrapper-hero .inner-hero h2 {
+      cursor: pointer;
       font-size: 1rem; }
+      .home #wrapper-hero .inner-hero h2 span.text-primary {
+        font-size: 1.5rem; }
   .home #wrapper-hero ul#menu-hero-nav-menu {
     list-style-type: none;
     display: -webkit-box;
@@ -11880,6 +11918,13 @@ section.about {
   .about-slider .about-slider__slide-text {
     max-width: 300px; }
 
+/* END Homepage About Section */
+/* Homepage Case Studies Section */
+.page-template-homepage .case-study {
+  color: #fff;
+  height: 700px; }
+
+/* END Homepage Case Studies Section */
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style

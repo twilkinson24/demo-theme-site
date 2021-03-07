@@ -2,6 +2,11 @@
 
    console.log('hi working')
 
+
+   // initialize tooltips if there are any
+    $('[data-toggle="tooltip"]').tooltip()
+
+
    if($('section.about .about-slider').length > 0) {
 
         var aboutSlider = $('section.about .about-slider')
