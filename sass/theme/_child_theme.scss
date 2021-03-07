@@ -48,14 +48,22 @@ h4 {
 
 /* Globals */
 body { // for specificity
-    .text-base {
-        font-size: 1rem;
+    .row { // bootstrap override
+        margin-left:0 !important;
+        margin-right:0 !important;
+    }
+
+    .text-xs {
+        font-size: $text_xs;
     }
     .text-sm {
         font-size: $text_sm;
     }
-    .text-xs {
-        font-size: $text_xs;
+    .text-base {
+        font-size: 1rem;
+    }
+    .text-md {
+        font-size: $text_md;
     }
     .text-lg {
         font-size: $text_lg;
@@ -64,11 +72,36 @@ body { // for specificity
         font-weight: 500;
     }
     // colors
+    .text-black {
+        color: $black;
+    }
     .text-yellow {
         color: $yellow;
     }
     
+    //Buttons 
+    .cta-btn {
+        font-size: $text_sm;
+        font-weight: 600;
+        letter-spacing: 2.4px;
+        text-transform: uppercase;
+        position: relative;
+        background: transparent;
+        border: 0;
+        outline: 0;
 
+
+        &:after {
+            content: '\f054';
+            font-family: FontAwesome;
+            font-weight: light;
+            font-size: 8px;
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%);
+        }
+    }
 }
 
 
@@ -78,7 +111,7 @@ body { // for specificity
 
 // tooltips
 .tooltip-inner {
-    background-color: rgba(255,255,255,0.999) !important;
+    background-color: rgba(255,255,255,.96) !important;
     /*!important is not necessary if you place custom.css at the end of your css calls. For the purpose of this demo, it seems to be required in SO snippet*/
     color: $black;
     box-shadow: 0 2px 15px rgba(0,0,0,.2);
@@ -88,24 +121,25 @@ body { // for specificity
     max-width: 350px;
    font-size: 1rem;
    line-height: 1.5;
+   text-align: left;
+   opacity: 1 !important;
+}  
+.tooltip.show{opacity:1!important;}
+.tooltip.top .tooltip-arrow {
+border-top-color: rgba(255,255,255,0.9999);
 }
-  
-  
-  .tooltip.top .tooltip-arrow {
-    border-top-color: rgba(255,255,255,0.7);
-  }
-  
-  .tooltip.right .tooltip-arrow {
-    border-right-color: rgba(255,255,255,0.7);
-  }
-  
-  .tooltip.bottom .tooltip-arrow {
-    border-bottom-color: rgba(255,255,255,0.7);
-  }
-  
-  .tooltip.left .tooltip-arrow {
-    border-left-color: rgba(255,255,255,0.7);
-  }
+
+.tooltip.right .tooltip-arrow {
+border-right-color: rgba(255,255,255,0.9999);
+}
+
+.tooltip.bottom .tooltip-arrow {
+border-bottom-color: rgba(255,255,255,0.9999);
+}
+
+.tooltip.left .tooltip-arrow {
+border-left-color: rgba(255,255,255,0.9999);
+}
 
 .home #wrapper-hero {
     height: 100vh;
@@ -124,23 +158,25 @@ body { // for specificity
         h1 {
             font-size: 90px;
 
-            span.text-primary { // asterisk tooltip
-                cursor: pointer;
-                display: inline-block;
-                font-size: 2rem;
-                padding-left: 10px;
-                transform: translateY(-35px);
-            }
         }
-
-        h2 {
+        h1 span.text-primary,
+        h2 span.text-primary { // asterisk tooltip
             cursor: pointer;
+            display: inline-block;
+            font-size: 2rem;
+            padding-left: 10px;
+            transform: translateY(-35px);
+        }
+        h2 {
             font-size: 1rem;
 
             span.text-primary { // asterisk tooltip
+                display: inline;
                 font-size: 1.5rem;
+                padding-left: 0;
             }
         }
+        
     }
 
     // Nav menu widget in hero
@@ -159,6 +195,11 @@ body { // for specificity
             a {
                 color: $black;
                 font-weight: 600;
+
+                &:hover {
+                    opacity: .8;
+                    text-decoration: none;
+                }
             }
         }
     }
@@ -287,14 +328,66 @@ section.about {
 }
 /* END Homepage About Section */
 
-/* Homepage Case Studies Section */
+/* Homepage Case Study */
 .page-template-homepage .case-study {
     color: #fff;
     height: 700px;
+
+    .case-study-wrap {
+        max-width: 1156px;
+        margin: 0 auto;
+    }
+
+    .case-study__text-content {
+        max-width: 453px;
+
+        h3 {
+            font-size: 74px;
+            line-height: 1;
+        }
+
+        .tag {
+            display: block;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-right: 20px;
+        }
+    }
+
+    .row.odd {
+        flex-direction: row-reverse;
+    }
 }
-
-
 /* END Homepage Case Studies Section */
 
 
+/* Homepage Clients Section */
+section.our-clients {
+    padding: 150px 50px;
+
+    &>div {
+        max-width: 1500px;
+
+        @media screen and (max-width: $screen-xxl) {
+            max-width: 1200px;
+        }
+    }
+
+    .clients-section-text {
+        max-width: 400px;
+    }
+
+    img {
+        margin-left: 50px;
+    }
+}
+/* END Homepage Clients Section */
+
+/* Our Team Section */
+section.our-team {
+    background-color: #FBFBF5;
+    padding: 150px 50px 200px;
+}
+
+/* END Our Team Section */
 

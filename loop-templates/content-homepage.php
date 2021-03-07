@@ -24,6 +24,8 @@ defined( 'ABSPATH' ) || exit;
             */
            echo get_template_part('template-parts/homepage/home-section-one'); 
            echo get_template_part('template-parts/homepage/home-section-two'); 
+           echo get_template_part('template-parts/homepage/home-section-three'); 
+           echo get_template_part('template-parts/homepage/home-section-four'); 
         }
     ?>
 
