@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="239px" height="11px" viewBox="0 0 239 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>8702974B-6F36-452B-B523-9F5367B8980D</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <filter x="-2.7%" y="-213.5%" width="105.5%" height="527.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="2.14776632" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-3.0%" y="-224.2%" width="106.0%" height="548.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="1.28865979" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home---Desktop----Initial-View---1600-x-1200" transform="translate(-1198.000000, -1173.000000)" fill="#606060">
+            <g id="top-section---yellow" transform="translate(50.000000, 50.000000)">
+                <g id="Group" transform="translate(965.000000, 842.000000)">
+                    <g id="floating-ipad" transform="translate(185.000000, 0.000000)">
+                        <g id="shadow" transform="translate(0.000000, 284.000000)">
+                            <ellipse id="Oval" fill-opacity="0.200000018" filter="url(#filter-1)" cx="117.1875" cy="2.49101796" rx="117.1875" ry="1.50898204"></ellipse>
+                            <ellipse id="Oval-Copy" fill-opacity="0.200000003" filter="url(#filter-2)" cx="97.7609536" cy="2.70658683" rx="64.4329897" ry="1"></ellipse>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

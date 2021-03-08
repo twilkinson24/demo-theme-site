@@ -28,7 +28,7 @@ $perch_post_count = 1;
 
 if($perch_case_study_query->have_posts()) : ?>
 
-<section class="case-studies"> 
+<section class="case-studies" id="work"> 
     
 <?php
 
@@ -48,61 +48,67 @@ while ( $perch_case_study_query->have_posts() ) : $perch_case_study_query->the_p
     if($perch_case_study_background_color) : ?>
 
         <article class="case-study d-flex align-items-center" style="background-color: <?php echo $perch_case_study_background_color; ?>">
-          <div class="case-study-wrap">
-                <div class="row <?php echo $even_or_odd_class; ?>">       
+            <div class="w-100 h-100 overlay">
+                <div class="case-study-wrap">
+                    <div class="row <?php echo $even_or_odd_class; ?>">       
 
-                <?php if(has_post_thumbnail()) : ?>
-                    <div class="col-md-6 p-0">
-                        <div class="featured-img">
-                            <?php echo get_the_post_thumbnail(); ?>
-                        </div>
-                    </div> <!-- end .col -->
-                    <div class="col-md-6 d-flex align-items-center p-0">
+                    <?php if(has_post_thumbnail()) : ?>
+                        <div class="col-sm-6 p-0">
+                            <div class="featured-img">
+                                <?php echo get_the_post_thumbnail(); ?>
+                            </div>
+                        </div> <!-- end .col -->
+                        <div class="col-sm-6 d-flex align-items-center p-0">
 
-                <?php else : ?>
-                    <div class="col-12 p-0">
-                <?php endif; ?>      
+                    <?php else : ?>
+                        <div class="col-12 p-0">
+                    <?php endif; ?>      
 
-                    <div class="case-study__text-content">
-                        <header>
-                            <h3>
-                                <?php echo get_the_title(); ?>
-                            </h3>
+                        <div class="case-study__text-content">
+                            <header>
+                                <h3>
+                                    <?php echo get_the_title(); ?>
+                                </h3>
 
-                            <?php 
-                                $perch_categories = get_the_category();
-    
-                                if ( ! empty( $perch_categories ) ) {
-                                    echo '<p class="text-black font-weight-bold text-md">' . esc_html( $perch_categories[0]->name ) . '</p>';   
-                                }
-                            ?>
-                        </header>
+                                <?php 
+                                    $perch_categories = get_the_category();
+        
+                                    if ( ! empty( $perch_categories ) ) {
+                                        if($perch_categories[0]->name !== 'Featured') {
+                                            echo '<p class="text-black font-weight-bold text-md">' . esc_html( $perch_categories[0]->name ) . '</p>';   
+                                        } else {
+                                            echo '<p class="text-black font-weight-bold text-md">' . esc_html( $perch_categories[1]->name ) . '</p>';  
+                                        }
+                                    }
+                                ?>
+                            </header>
 
-                        <ul class="tags d-flex list-unstyled text-black">    
-                        <?php
-                            $tags = get_tags('post_tag'); //taxonomy=post_tag
-                            
-                            if ( $tags ) :
-                                foreach ( $tags as $tag ) : ?>
-                                    <li class="text-sm text-uppercase"><span class="tag" href="<?php echo esc_url( get_tag_link( $tag->term_id ) ); ?>" title="<?php echo esc_attr( $tag->name ); ?>"><?php echo esc_html( $tag->name ); ?></span></li>
-                                <?php endforeach; ?>
-                            <?php endif; ?>
-                        </ul>
+                            <ul class="tags d-flex list-unstyled text-black">    
+                            <?php
+                                $tags = get_tags('post_tag'); //taxonomy=post_tag
+                                
+                                if ( $tags ) :
+                                    foreach ( $tags as $tag ) : ?>
+                                        <li class="text-sm text-uppercase"><span class="tag" href="<?php echo esc_url( get_tag_link( $tag->term_id ) ); ?>" title="<?php echo esc_attr( $tag->name ); ?>"><?php echo esc_html( $tag->name ); ?></span></li>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
+                            </ul>
 
 
 
-                        <p class="excerpt">
-                            <?php echo get_the_excerpt(); ?>
-                        </p>
-                        <?php if($perch_case_study_button_text) : ?>
-                            <p>
-                                <button class="cta-btn text-black"><?php echo $perch_case_study_button_text; ?></button>
+                            <p class="excerpt">
+                                <?php echo get_the_excerpt(); ?>
                             </p>
-                        <?php endif; ?>
-                        </div>
-                    </div><!-- end .col -->
-                </div>
-            </div> <!-- end .case-study__wrap -->
+                            <?php if($perch_case_study_button_text) : ?>
+                                <p>
+                                    <button class="cta-btn text-black"><?php echo $perch_case_study_button_text; ?></button>
+                                </p>
+                            <?php endif; ?>
+                            </div>
+                        </div><!-- end .col -->
+                    </div>
+                </div> <!-- end .case-study__wrap -->
+            </div> <!-- end overlay -->
         </article>
 
         <?php $perch_post_count++; ?>

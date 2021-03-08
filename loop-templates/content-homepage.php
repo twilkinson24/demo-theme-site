@@ -26,6 +26,9 @@ defined( 'ABSPATH' ) || exit;
            echo get_template_part('template-parts/homepage/home-section-two'); 
            echo get_template_part('template-parts/homepage/home-section-three'); 
            echo get_template_part('template-parts/homepage/home-section-four'); 
+
+            // for fixed footer
+           echo '<div id="home-footer-anchor"></div>';
         }
     ?>
 
