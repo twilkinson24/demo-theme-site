@@ -103,7 +103,7 @@ body { // for specificity
         font-size: $text_sm;
         font-weight: 600;
         letter-spacing: 2.4px;
-        padding: 0;
+        padding: 0 10px 0 0;
         position: relative;
         background: transparent;
         border: 0;
@@ -603,13 +603,17 @@ section.about {
         font-size: $text_sm;
         font-weight: 600;
         letter-spacing: 2.4px;
-        padding: 0;
+        padding: 0 10px 0 0;
         position: relative;
         background: transparent;
         border: 0;
         outline: 0;
         text-transform: uppercase;
 
+        &:hover {
+            color: $primary !important;
+            text-decoration: none;
+        }
 
         &:after {
             content: '\f054';
@@ -619,7 +623,7 @@ section.about {
             position: absolute;
             top: 50%;
             left: 100%;
-            transform: translateY(-50%);
+            transform: translateY(-25%) rotate(90deg);
         }
     }
 }

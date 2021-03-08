@@ -11769,7 +11769,7 @@ body .cta-btn {
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 2.4px;
-  padding: 0;
+  padding: 0 10px 0 0;
   position: relative;
   background: transparent;
   border: 0;
@@ -12203,12 +12203,15 @@ section.about {
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 2.4px;
-  padding: 0;
+  padding: 0 10px 0 0;
   position: relative;
   background: transparent;
   border: 0;
   outline: 0;
   text-transform: uppercase; }
+  .about-slider .text-sm:hover {
+    color: #489dc1 !important;
+    text-decoration: none; }
   .about-slider .text-sm:after {
     content: '\f054';
     font-family: FontAwesome;
@@ -12217,8 +12220,8 @@ section.about {
     position: absolute;
     top: 50%;
     left: 100%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%); }
+    -webkit-transform: translateY(-25%) rotate(90deg);
+            transform: translateY(-25%) rotate(90deg); }
 
 /* END Homepage About Section */
 /* Homepage Case Study */
